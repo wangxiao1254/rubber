@@ -99,7 +99,7 @@ class Bibliography:
 		"""
 		if self.style:
 			old_bst = self.style + ".bst"
-			if exists(old_bst) and self.doc.sources.has_key(old_bst):
+			if exists(old_bst) and old_bst in self.doc.sources:
 				self.doc.remove_source(old_bst)
 
 		self.style = style
